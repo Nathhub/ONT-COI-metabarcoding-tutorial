@@ -376,9 +376,27 @@ awk -v MAXLVL="$MAXLVL" -F'\t' 'BEGIN{OFS="\t"}
 - **[Amplicon Sorter](https://github.com/avierstr/amplicon_sorter)** – Reference-free clustering of Oxford Nanopore amplicons and consensus generation.  
 - **[Minimap2](https://github.com/lh3/minimap2)** – Fast sequence alignment program for long and short reads.  
 - **[Samtools](https://github.com/samtools/samtools)** – Utilities for manipulating alignments in the SAM/BAM/CRAM formats.  
-- **[MZG COI Database](https://github.com/mbgmbg/MZGdb)** – Curated COI reference sequences for metazoan identification.
+
+---
+## 🧮 Next Steps
+
+At this stage, you have:
+- An **OTU abundance table** (`otu_table.primary.tsv` or `otu_table.primary.cpm.tsv`)  
+- A **taxonomy table** (`taxonomy_table.tsv`)  
+
+These files can now be imported into **R** for community composition and diversity analyses.
+
+We recommend using the **[phyloseq](https://www.bioconductor.org/packages/release/bioc/html/phyloseq.html)** package, which allows you to:
+- Merge OTU, taxonomy, and metadata tables  
+- Calculate alpha and beta diversity  
+- Visualize community structure with ordinations (e.g., PCoA, NMDS)  
+- Generate taxonomic bar plots and heatmaps  
+
+To get started, explore the [phyloseq tutorials](https://joey711.github.io/phyloseq/) for examples of downstream analysis and visualization.
 
 ---
 
 **End of tutorial.**  
-🧬 *You now have a complete OTU table (raw and normalized) and a taxonomy table ready for ecological or diversity analyses.*
+🧬 *You now have a complete metabarcoding dataset ready for ecological analysis in R!*
+**End of tutorial.**  
+🧬 *You now have a complete OTU table (raw and normalized) and a taxonomy table ready for ecological or diversity analyses. The next step is to analyse*
