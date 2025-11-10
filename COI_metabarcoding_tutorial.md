@@ -56,14 +56,19 @@ Remove primer sequences from both ends of each read. This ensures that downstrea
 
 **Command (for COI):**
 ```bash
-cutadapt    -g GGWACWGGWTGAACWGTWTAYCCYCC...TGRTTYTTYGGICAYCCIGARGTITA  \
-            -g TAIACYTCIGGRTGICCRAARAAYCA...GGRGGRTAWACWGTTCAWCCWGTWCC   \
-            --error-rate 0.2   \
-            --cores=64  \
-            --length 350   \
-            --discard-untrimmed  \
-            -o trimmed_barcode${i}.fastq.gz  \
-            barcode${i}.fastq.gz
+for i in {1..18}; do
+    echo "Processing barcode${i}.fastq.gz..."
+    cutadapt \
+        -g GGWACWGGWTGAACWGTWTAYCCYCC...TGRTTYTTYGGICAYCCIGARGTITA \
+        -g TAIACYTCIGGRTGICCRAARAAYCA...GGRGGRTAWACWGTTCAWCCWGTWCC \
+        --error-rate 0.2 \
+        --cores=64 \
+        --length 350 \
+        --discard-untrimmed \
+        -o trimmed_barcode${i}.fastq.gz \
+        barcode${i}.fastq.gz
+    echo "Finished barcode${i}.fastq.gz"
+done
 ```
 
 **Notes:**  
