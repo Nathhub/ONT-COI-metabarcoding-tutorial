@@ -402,5 +402,3 @@ To get started, explore the [phyloseq tutorials](https://joey711.github.io/phylo
 
 **End of tutorial.**  
 🧬 *You now have a complete metabarcoding dataset ready for ecological analysis in R!*
-**End of tutorial.**  
-🧬 *You now have a complete OTU table (raw and normalized) and a taxonomy table ready for ecological or diversity analyses. The next step is to analyse*
