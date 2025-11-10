@@ -33,9 +33,10 @@ A step-by-step guide explaining how to:
 - Generate consensus sequences (OTUs)  
 - Build and normalize an OTU table  
 - Assign taxonomy using BLAST  
-- Export data for analysis in R  
+- Export data for analysis in R
 
 Each step includes **commands**, **explanations**, and **teaching notes** to help students understand the reasoning behind each part of the workflow.
+
 ---
 
 ## 👩‍🔬 Author
