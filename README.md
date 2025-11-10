@@ -2,7 +2,7 @@
 
 Welcome! 👋  
 This repository contains the workflow for extracting and processing the **COI (cytochrome oxidase I)** metabarcoding dataset from the eDNA samples collected during the **OceanX Around Africa** expedition and sequenced using an Oxford Nanopore PromethION sequencer.  
-The workflow demonstrates how to go from **raw Nanopore PromethION reads** to a final **OTU (Operational Taxonomic Unit)** and **taxonomy table** using an open-source bioinformatics pipeline.
+The workflow demonstrates how to go from **raw Nanopore PromethION reads** to a final **OTU (Operational Taxonomic Unit)** and **taxonomy table** using a series of open-source bioinformatics tools.
 
 ---
 
