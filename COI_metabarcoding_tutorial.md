@@ -311,7 +311,7 @@ awk 'NR==1{print; next}
 
 **Purpose:**  
 Identify each OTU by comparing it to a reference COI database (here, **MZGdb_COI**).
-See page here: https://metazoogene.org/mzgdb/atlas/html-src/data__T4000000__o00.html 
+See page here: [https://metazoogene.org/mzgdb/atlas/html-src/data__T4000000__o00.html](https://metazoogene.org/mzgdb/atlas/html-src/data__MZGdbALL__o00.html) 
 
 **Commands:**
 ```bash
