@@ -14,6 +14,10 @@ The goal is to produce two main outputs:
 
 Each step below explains **what**, **why**, and **how**, so that students can both *replicate* and *understand* the reasoning behind each command.
 
+🖥️ **Note:**  
+The steps in this tutorial were performed on a **High-Performance Computing (HPC)** system.  
+Students can run the same commands on a **Linux terminal** or a Unix-like environment (e.g., WSL or macOS), but should **adjust the number of threads or cores** used by each command (`--cores`, `-j`, or `-t` options) according to their machine’s capacity to prevent slowdowns or crashes.
+
 ---
 
 ## 🧩 Step 1 — Combine FASTQ Files by Barcode
