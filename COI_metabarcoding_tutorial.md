@@ -158,7 +158,11 @@ Convert filtered reads to FASTA and standardize headers so that each read has a 
 
 **Commands:**
 ```bash
-seqkit fq2fa filtered_reads.fastq.gz -o filtered_reads.fasta
+for i in {01..18}; do
+    echo "Converting filtered_barcode${i}.fastq.gz to FASTA..."
+    seqkit fq2fa filtered_barcode${i}.fastq.gz -o filtered_barcode${i}.fasta
+    echo "Finished filtered_barcode${i}.fasta"
+done
 ```
 
 **Rename headers:**
@@ -286,12 +290,21 @@ awk 'NR==1{print; next}
 
 **Purpose:**  
 Identify each OTU by comparing it to a reference COI database (here, **MZGdb_COI**).
+See page here: https://metazoogene.org/mzgdb/atlas/html-src/data__T4000000__o00.html 
 
 **Commands:**
 ```bash
 makeblastdb -in ~/ote_db/MZG_db/all/MZGfasta-coi__MZGdbALL__o00__A.fasta             -dbtype nucl             -out MZGdb_COI
 
-blastn -query all_samples_consensus_nodup.fasta        -db MZGdb_COI        -out blast_consensus_nodup_results.b6        -outfmt 6        -evalue 1e-10        -num_threads 64        -max_target_seqs 1
+blastn \
+    -query all_samples_consensus_nodup.fasta \
+    -db MZGdb_COI \
+    -out blast_consensus_nodup_results.b6 \
+    -outfmt 6 \
+    -evalue 1e-10 \
+    -num_threads 64 \
+    -max_target_seqs 1
+
 ```
 
 **Notes:**  
@@ -358,12 +371,12 @@ awk -v MAXLVL="$MAXLVL" -F'\t' 'BEGIN{OFS="\t"}
 
 ## 📘 References
 
-- **Cutadapt** – Martin, M. (2011). *EMBnet.journal*, 17(1):10–12.  
-- **Chopper** – Oxford Nanopore read quality and length filter.  
-- **Amplicon Sorter** – clustering and consensus generation for amplicon reads.  
-- **Minimap2** – Li, H. (2018). *Bioinformatics*, 34(18):3094–3100.  
-- **Samtools** – Danecek et al. (2021). *Gigascience*, 10(2).  
-- **MZG COI Database** – curated COI reference sequences for metazoan identification.
+- **[Cutadapt](https://github.com/marcelm/cutadapt)** – Tool for removing adapter sequences from high-throughput sequencing reads.  
+- **[Chopper](https://github.com/wdecoster/chopper)** – Long-read quality and length filtering tool written in Rust.  
+- **[Amplicon Sorter](https://github.com/avierstr/amplicon_sorter)** – Reference-free clustering of Oxford Nanopore amplicons and consensus generation.  
+- **[Minimap2](https://github.com/lh3/minimap2)** – Fast sequence alignment program for long and short reads.  
+- **[Samtools](https://github.com/samtools/samtools)** – Utilities for manipulating alignments in the SAM/BAM/CRAM formats.  
+- **[MZG COI Database](https://github.com/mbgmbg/MZGdb)** – Curated COI reference sequences for metazoan identification.
 
 ---
 
