@@ -407,7 +407,7 @@ At this stage, you have:
 
 These files can now be imported into **R** for community composition and diversity analyses.
 
-We recommend using the **[phyloseq](https://www.bioconductor.org/packages/release/bioc/html/phyloseq.html)** package, which allows you to:
+I recommend using the **[phyloseq](https://www.bioconductor.org/packages/release/bioc/html/phyloseq.html)** package, which allows you to:
 - Merge OTU, taxonomy, and metadata tables  
 - Calculate alpha and beta diversity  
 - Visualize community structure with ordinations (e.g., PCoA, NMDS)  
