@@ -8,11 +8,28 @@
 
 This tutorial guides you through the full bioinformatics workflow used to process **COI metabarcoding data** generated with the **Oxford Nanopore PromethION** platform during the *OceanX Around Africa* expedition.  
 
-The goal is to produce two main outputs:
+A total of **18 environmental DNA (eDNA) samples** were collected by filtering **2 L of seawater** from **Niskin bottles** mounted on a **CTD rosette**. Two depths were targeted at each station:  
+- **Surface waters**  
+- **Deep Chlorophyll Maximum (DCM)**  
+
+DNA was extracted using the **QIAGEN DNeasy PowerWater Kit**, optimized for filtering marine microbial and eukaryotic DNA from environmental samples.  
+
+We amplified three different **molecular markers** by PCR to capture a broad range of biodiversity:  
+- **16S rRNA gene** – targeting **bacteria and archaea**  
+- **18S rRNA gene** – targeting **protists and other microeukaryotes**  
+- **COI (cytochrome oxidase I)** – targeting **metazoans (animals)**  
+
+After amplification, we **pooled the barcoded amplicons per sample** and used the **Oxford Nanopore Native Barcoding Kit** to prepare the sequencing libraries and **multiplex** all 18 samples.  
+The final libraries were sequenced on **three PromethION flow cells**.
+
+In this tutorial, we will focus specifically on the **COI marker**, which provides insight into **animal diversity** within the sampled marine communities.
+
+The goal of this workflow is to produce two main outputs:
 1. An **OTU table** — showing read abundances of each consensus sequence (OTU) across samples.  
 2. A **taxonomy table** — linking each OTU to its best taxonomic match from a reference database.
 
 Each step below explains **what**, **why**, and **how**, so that students can both *replicate* and *understand* the reasoning behind each command.
+
 
 🖥️ **Note:**  
 The steps in this tutorial were performed on a **High-Performance Computing (HPC)** system.  
